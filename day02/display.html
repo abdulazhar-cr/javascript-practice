@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>My First Web Page</h2>
+    <p>My First Paragraph.</p>
+
+    <p id="demo"></p>
+    <p class="demoClass"></p>
+    <button onclick="document.write('New name')">Try Now</button>
+    <!-- Data display via innerHTML -->
+    <script>
+      document.querySelector("#demo").innerHTML = 5 + 6;
+      document.querySelector(".demoClass").innerHTML =
+        "This is via query selector fuction with class name";
+    </script>
+    <!-- Data Display via document write function---ONLY used for testing -->
+    <script>
+      document.write("This text is from write");
+    </script>
+    <!-- Data Displayed via window object alert function -->
+    <script>
+      window.alert("Please confirm your information");
+    </script>
+    <!-- Data display in the console  this is mostly used for code debugging -->
+    <script>
+      console.log("This is my first console log", document);
+    </script>
+  </body>
+</html>
