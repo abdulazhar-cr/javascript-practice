@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Arithmatic Operators</h1>
+    <p id="demo"></p>
+    <p id="ex2"></p>
+    <script>
+      // increment operator
+      let counter = 0;
+      //   counter = counter + 1;
+      counter++; // counter=counter+1
+      console.log("counter::", counter);
+
+      counter++;
+      counter++;
+      // Decrement Operator
+      // counter=counter-1;
+      counter--;
+      console.log("counter::", counter);
+      // aDDITION aSSIGNMENT oPERATOR
+      //   counter = counter + 5;
+      counter += 5;
+
+      // Substraction Assigment Operator
+      //   counter = counter - 5;
+      counter -= 5;
+
+      counter *= 5;
+      counter /= 5;
+      //   counter = counter % 5;
+      counter %= 5;
+
+      // + operator--if given string-- concatenation
+      const firstName = "Azhar";
+      const lastName = "Shaikh";
+      const fullName = firstName + " " + lastName;
+
+      let text1 = "What a very";
+      // text1=text1+"nice day"
+      text1 += " nice day";
+      console.log("value of text1 variable is::", text1);
+      document.getElementById("demo").innerHTML = fullName;
+      document.getElementById("ex2").innerHTML = text1;
+    </script>
+  </body>
+</html>
