@@ -10,8 +10,25 @@
     <p id="demo"></p>
     <script>
       console.log(typeof 3);
-      const cars = ["Saab", "Volvo", "BMW"];
-      console.log(typeof cars);
+      let cars;
+      console.log("Just cars ", typeof cars, cars);
+      cars = ["Saab", "Volvo", "BMW"];
+
+      console.log("type of cars arrray is", typeof cars);
+      const person = {
+        firstName: "Azhar",
+        lastName: "Shaikh",
+        age: 33,
+        height: 6,
+      };
+      console.log("Type of person object is", typeof person);
+      let x = 10;
+      console.log("On line 16 datatype of x is", typeof x);
+      x = "Hi";
+      console.log("On line 18 datatype of x is", typeof x);
+      x = true;
+      console.log("On line 20 datatype of x is", typeof x);
+
       document.getElementById("demo").innerHTML =
         typeof "" + "<br>" + typeof "John" + "<br>" + typeof "John Doe";
     </script>

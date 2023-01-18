@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Functions Example</h1>
+    <p id="demo"></p>
+    <script>
+      // function is a block of code used to perform a particular task
+      // function is executed once it is invoked/call
+
+      // function defination
+      function myFunction(a, b) {
+        //block of code to perform some task
+        console.log("inside myFunction::", a, b); //statement 1
+        return a * b; //statement 2
+      }
+    //   console.log("a and b values::", a, b);
+      const result = myFunction(4, 7);
+      console.log("The result is::", result);
+      const result1 = myFunction(40, 10);
+      console.log("The result1 is::", result1);
+      document.getElementById("demo").innerHTML = myFunction(3, 6);
+    </script>
+  </body>
+</html>
