@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>objects Example</h1>
+    <p id="demo"></p>
+    <script>
+      //   let carName = "Fiat";
+      //   let carColor = "red";
+      //   let carModel = "500";
+      let car = { name: "Fiat", color: "blue", model: "F341" };
+      console.log(typeof car);
+      console.log(typeof car.name);
+      document.getElementById("demo").innerHTML =
+        "Car Name:" +
+        car.name +
+        "</br>" +
+        "Car Model: " +
+        car.model +
+        "</br>" +
+        "Car Color:" +
+        car.color;
+    </script>
+  </body>
+</html>
