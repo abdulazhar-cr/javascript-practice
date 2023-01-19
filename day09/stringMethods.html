@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Strings Example</h1>
+    <p id="demo"></p>
+
+    <script>
+      const text = "ABCDEF";
+      console.log("Length of String is::", text.length);
+      // requirement- extract CD from above text
+      // slice(startPosition,endPosition) ---End position not included
+      // it return new string
+      const extractedText = text.slice(2, 4);
+      console.log("Extracted text is::", extractedText);
+      // requirement- extract Banana from above text
+      // slice(startPosition,endPosition) ---End position not included
+      // it return new string
+      let text1 = "Apple, Banana, Kiwi";
+      let part = text1.slice(7);
+      let part2 = text1.slice(-12, -6);
+
+      console.log("Part:", part);
+      console.log("Negetive position Part2:", part2);
+
+      let name = "Azhar, Shaikh";
+      let firstName = name.slice(7);
+      document.getElementById("demo").innerHTML = firstName;
+      // substring and slice are similar--
+      // Just that if you pass start or end less than 0
+      // i.e negative number it will consider it as 0
+      let partSubstring = text1.substring(7, 13);
+      let partSubstringNegative = text1.substring(-12, -6);
+      console.log("Extracted Banana from text1 via substring method::",partSubstring);
+      console.log("Extracted Banana from text1 via substring method Negative Parameters::",partSubstringNegative);
+      // substr and slice are similar ---the differece the second is the length of the extracted string
+      const partSubStr=text1.substr(7,6);
+      console.log("Banana extracted via substr method::",partSubStr);
+    </script>
+  </body>
+</html>
