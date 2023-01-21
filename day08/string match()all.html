@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>java script string</h1>
+    <h2>the match all()method</h2>
+    <p>es2020 intoduced the string method match all().</p>
+    <p id="demo"></p>
+    <script>
+      let text =
+        "i love cats. cats are very easy to love. cats are very popular.";
+      const iterator = text.matchall("cats");
+      document.getElementById("demo").innerHTML=Array.from(iterator);
+    </script>
+  </body>
+</html>
