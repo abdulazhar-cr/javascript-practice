@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array Methods</h1>
+    <p id="demo"></p>
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      //   fruits.pop();
+      //   fruits.push("Dragon Fruit");
+      //   fruits.pop();
+      //   fruits.pop();
+      //   fruits.shift();
+      fruits.unshift("Lemon");
+      console.log("fruits", fruits);
+      fruits[0] = "Kiwi";
+      console.log("fruits", fruits);
+      console.log("Array Length ::", fruits.length);
+      fruits[10] = "XYZ";
+      delete fruits[0];
+      // fruits[fruits.length] = "Dragon Fruit";
+      // fruits.push("Dragon Fruit")
+      console.log("Fruits after adding at index 10", fruits);
+
+      const myGirls = ["Cecilie", "Lone"];
+      const myBoys = ["Emil", "Tobias", "Linus"];
+      const arr3 = ["Robin", "Morgan"];
+
+      const myChildren = myBoys.concat(myGirls, arr3, fruits, "New String");
+      console.log("childeren array", myChildren);
+      document.getElementById("demo").innerHTML = myChildren.join(" | ");
+    </script>
+  </body>
+</html>

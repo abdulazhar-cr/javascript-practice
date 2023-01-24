@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS tutorial</title>
+    <style type="text/css">
+      body {
+        margin: 30px 10px;
+        padding: 0px;
+        background-color: #efe;
+        color: #010;
+      }
+      input {
+        font-family: Times;
+      }
+      p#colors {
+        color: #a34;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>Colors in the array:</p>
+    <p id="colors"></p>
+    <p>Modify array:</p>
+    <form action="" method="post">
+      <input type="text" onfocus="this.value=''" value="add color" id="add" />
+      <input type="button" onclick="addCol()" value="add new color" /><br />
+      <input type="button" onclick="remCol()" value="remove first color" />
+    </form>
+
+    <script type="text/javascript">
+      var cols = ["blue", "red", "black", "yellow", "doink"];
+      var add = document.getElementById("add");
+      var col = document.getElementById("colors");
+      col.innerHTML = cols.join(" / ").toString();
+      function addCol() {
+        cols.push(add.value);
+        col.innerHTML = cols.join(" / ").toString();
+      }
+      function remCol() {
+        cols.shift();
+        col.innerHTML = cols.join(" / ").toString();
+      }
+    </script>
+  </body>
+</html>
