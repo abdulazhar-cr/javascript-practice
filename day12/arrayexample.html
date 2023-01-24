@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array</h1>
+    <p id="demo"></p>
+    <script>
+      // Data Type
+      //Number,String,BigInt(2020),Null,Undefined,Object,
+
+      // Object --- Object,Array(Object)
+      // Object -entity-car,person------Objects---Property and Methods
+      //   const firstName="Azhar"
+      //   const lastname="Shaikh";
+      const person = {
+        firstName: "Azhar",
+        lastname: "Shaikh",
+      };
+      console.log(person.lastname);
+      const persons = [
+        { firstName: "Azhar", lastName: "Shaikh" },
+        { firstName: "Muddasir", lastName: "Deshmukh" },
+        { firstName: "xfcg", lastName: "hh" },
+      ];
+      console.log(persons[0].lastName);
+      persons[2].lastName = "aufadjf";
+      //   const car1 = "Renault";
+      //   const car2 = "Maruti";
+      //   const car3 = "Volvo";
+      //   const cars = ["Renault", "Maruti", "Volvo"];
+      //   cars[1].engineDetails.engineNumber
+      const cars = [
+        {
+          name: "Volvo",
+          model: 400,
+          colorsAvailable: ["Black", "Gray"],
+        },
+        {
+          name: "Maruti",
+          model: 800,
+          colorsAvailable: ["Red", "Blue"],
+          engineDetails: {
+            enigneName: "ssd",
+            engineNumber: 245645,
+            engineType: "petrol",
+          },
+        },
+        {
+          name: "Volvo",
+          model: 600,
+          colorsAvailable: ["Voilet", "sdsd"],
+        },
+      ];
+      //   const numbers = [1, 2, 3, 4, 5, 7, 8, 9];
+      // 0           1       2
+      //   const car={}
+
+      document.getElementById("demo").innerHTML = ` 
+      Total Number of Cars: ${cars.length}
+      Volve Name: ${cars[0].name} Volvo  Model: ${cars[0].model} 
+       Volvo Color : ${cars[0].colorsAvailable[0]} , ${cars[0].colorsAvailable[1]}</br>
+        Car 2 Name: ${cars[1].name}   Car 2 Model: ${cars[1].model} </br>
+         Car 3 Name: ${cars[2].name} Car 3 Model : ${cars[2].model}
+        `;
+    </script>
+  </body>
+</html>
