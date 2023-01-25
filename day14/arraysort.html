@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Sorting</title>
+  </head>
+  <body>
+    <h1>Array Sorting</h1>
+    <input id="numInputId" type="number" placeholder="Enter Numbers" />
+    <button onclick="onAddNumberClicked()">Add Number to the Array</button>
+    <br />
+    <input id="fruitInputId" type="text" placeholder="Enter Fruits" />
+    <button onclick="onAddFruitsClicked()">Add Fruits to the Array</button>
+    <p id="numId"></p>
+    <p id="fruitsId"></p>
+    <script>
+      const numbersArray = [];
+      const fruits = [];
+      const paragraphNumElement = document.getElementById("numId");
+      console.log("paragraphNumElement", paragraphNumElement);
+      const inputNumberElement = document.getElementById("numInputId");
+      inputNumberElement.value = 0;
+      console.log("inputNumberElement", inputNumberElement);
+      const fruitInputElement = document.getElementById("fruitInputId");
+      const fruitsParagraphElement = document.getElementById("fruitsId");
+      function onAddNumberClicked() {
+        //block code
+        console.log("Value of input box", inputNumberElement.value);
+        numbersArray.push(Number(inputNumberElement.value));
+        numbersArray.sort(function (a, b) {
+          return b - a;
+        });
+        // numbersArray.reverse();
+        paragraphNumElement.innerHTML = numbersArray.join("|");
+      }
+
+      //   function xyz(){
+
+      //   }
+      function onAddFruitsClicked() {
+        fruits.push(fruitInputElement.value);
+        fruits.sort();
+        fruits.reverse();
+        fruitsParagraphElement.innerHTML = fruits.join(" | ");
+      }
+    </script>
+  </body>
+</html>
