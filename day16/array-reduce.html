@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="sum"></p>
+    <script>
+      const numbers = [45, 4, 9, 16, 25];
+      const sum = numbers.reduce(function (
+        previousValue,
+        currentValue,
+        index,
+        array
+      ) {
+        console.log(previousValue, currentValue, index, array);
+        return previousValue + currentValue;
+      },
+      0);
+      //   const sum = numbers.reduce(function (accumulator, value, index, array) {
+      //     console.log(accumulator, value, index, array);
+      //     return accumulator + value;
+      //   }, 0);
+      console.log("Sum of array elemets is ::", sum);
+      var rows = [
+        [2, 3, 5],
+        [1, 2, 4],
+        [8, 5, 5],
+      ];
+      var matrixElements = rows.reduce(function (prev, current) {
+        console.log("prev", prev, "current", current);
+        return prev.concat(current);
+      });
+      console.log("matrixElements", matrixElements);
+      //   const sum = numbers.reduce(generateSum, 0);
+      //   console.log("Sum of array elemets is ::", sum);
+
+      //   function generateSum(accumulator, value, index, array) {
+      //     console.log(accumulator, value, index, array);
+      //     return accumulator + value;
+      //   }
+      document.getElementById("demo").innerHTML =
+        "Given Array:" + numbers.join(",");
+      document.getElementById("sum").innerHTML =
+        "The sum of above array is::" + sum;
+    </script>
+  </body>
+</html>
