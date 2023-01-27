@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array Number Sorting</h1>
+    <p id="demo"></p>
+    <script>
+      const numArray = [4, 6, 8, 1, 28, 7, 100];
+      const maxValue = Math.max.apply(null, numArray);
+      console.log(Math.min(4, 6, 8, 1, 28, 7, 100));
+      //   Math.
+      console.log("maxValue", maxValue);
+      const minValue = Math.min.apply(null, numArray);
+      console.log("minValue::", minValue);
+
+      numArray.sort(function (a, b) {
+        console.log("value of a is::", a);
+        console.log("value of b is::", b);
+        console.log("value of a-b", b - a);
+        return b - a;
+      });
+      document.getElementById("demo").innerHTML = numArray.join("|");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Array of Objects</title>
+  </head>
+  <body>
+    <h1>Example Sorting Array of Objects</h1>
+    <p id="demo"></p>
+    <script>
+      const cars = [
+        { type: "Volvo", year: 2016 },
+        { type: "Saab", year: 2001 },
+        { type: "BMW", year: 2010 },
+      ];
+      cars.sort(function (a, b) {
+        console.log("value of a is::", a);
+        console.log("value of b is::", b);
+        return b.year - a.year;
+      });
+      document.getElementById("demo").innerHTML = `Cars :</br>
+      1. Type : ${cars[0].type}     Year: ${cars[0].year} </br>
+      2. Type : ${cars[1].type}     Year: ${cars[1].year} </br>
+      3. Type : ${cars[2].type}     Year: ${cars[2].year} </br>
+      `;
+    </script>
+  </body>
+</html>
