@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      const numArray = [34, 56, 23, 56, 677, 43, 22, 3456];
+      let txt = "";
+      numArray.forEach(myFunction);
+
+      function myFunction(x, y, z) {
+        //lock of code
+        // console.log("Value::", item, "index", i, "array entire", array);
+        txt += " | " + x;
+      }
+      document.getElementById("demo").innerHTML = txt;
+    </script>
+  </body>
+</html>
