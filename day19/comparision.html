@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="ageId" placeholder="Enter your age" />
+    <button onclick="validate()">Vote!</button>
+    <p id="demo"></p>
+    <script>
+      //   const x = 20;
+      //   console.log("comparision", x > 18);
+      const ageInputElement = document.getElementById("ageId");
+      const paragraphElement = document.getElementById("demo");
+      function validate() {
+        console.log("Value of input::", ageInputElement.value);
+        //block  of code
+        // if (Number(ageInputElement.value) > 18) {
+        //   // if the condition is true then this block is execute
+        //   paragraphElement.innerHTML = "Great! You are eligible to Vote!";
+        // } else {
+        //   paragraphElement.innerHTML = "You are too young to vote!";
+        // }
+        // condition ? "if true" : "if false"
+        if (isNaN(ageInputElement.value)) {
+          paragraphElement.innerHTML = "Invalid Input";
+        } else {
+          paragraphElement.innerHTML =
+            Number(ageInputElement.value) > 18
+              ? "Great! You are eligible to Vote!"
+              : "You are too young to vote!";
+        }
+      }
+    </script>
+  </body>
+</html>
