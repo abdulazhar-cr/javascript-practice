@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      const cars = ["Maruti", "Renault", "BMW"];
+      cars.push("Tata");
+      let text = "";
+      //   text += cars[0] + "</br>";
+      //   text += cars[1] + "</br>";
+      //   text += cars[2] + "</br>";
+      // Initialization let i=0;
+      // Condition check
+      // execute the code
+      // Increment  i=i+1 //i++
+      // Iteration 0 --i=0 0<4 (true) text=car[0]=Maruti i++
+      // Iteration 1--1<4  Maruti+cars[1] text=MarutiRenault i++=2
+      //Iteration 2 i=2 2<4 MarutiRenault+cars[2]=MarutiRenualtBMW  i++ 3
+      // Iteration 3 i=3 3<4  MarutiRenaultBMW+cars[3] =MarutiRenaultBMWTata i++ i=4
+      // iteration 4  4<4
+      for (let i = 0; i < cars.length; i++) {
+        console.log("Iteration::", i, cars[i], text);
+        text += cars[i] + "</br>";
+        //s2
+        //s3
+      }
+      for (let index = 1; index <= 10; index++) {
+        console.log("Value index", index);
+      }
+      for (let j = 5; j <= 100; j += 5) {
+        console.log("Value of j", j);
+      }
+      document.getElementById("demo").innerHTML = text;
+    </script>
+  </body>
+</html>

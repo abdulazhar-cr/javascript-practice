@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      const day = new Date().getDay();
+      console.log("The current Day is ::", day);
+      let weeekDay;
+      //   switch (day) {
+      //     case 0:
+      //       weeekDay = "Sunday";
+      //       break;
+      //     case 1:
+      //       weeekDay = "Monday";
+      //       break;
+      //     case 2:
+      //       weeekDay = "Tuesday";
+      //       break;
+      //     case 3:
+      //       weeekDay = "Wednesday";
+      //       break;
+      //     case 4:
+      //       weeekDay = "Thrusday";
+      //       break;
+      //     case 5:
+      //       weeekDay = "Friday";
+      //       break;
+      //     case 6:
+      //       weeekDay = "Saturday";
+      //       break;
+      //   }
+      //   if (day === 0) {
+      //     weeekDay = "Sunday";
+      //   } else if (day === 1) {
+      //     weeekDay = "Monday";
+      //   } else if (day === 2) {
+      //     weeekDay = "Tuesday";
+      //   } else if (day === 3) {
+      //     weeekDay = "Wednesday";
+      //   } else if (day === 4) {
+      //     weeekDay = "Thrusday";
+      //   } else if (day === 5) {
+      //     weeekDay = "Friday";
+      //   } else if (day === 6) {
+      //     weeekDay = "Saturday";
+      //   }
+      //   let text;
+      //   switch (day) {
+      //     default:
+      //       text = "Looking forward for Weekend";
+      //       break;
+      //     case 0:
+      //       text = "Today is Sunday";
+      //       break;
+      //     case 6:
+      //       text = "Today is Saturday";
+      //       break;
+      //   }
+      let text;
+      switch (day) {
+        case 4:
+        case 5:
+          text = "Soon it will be weekend";
+          break;
+        case 0:
+        case 6:
+          text = "It is a Weenend";
+          break;
+        default:
+          text = "Looking forward for Weekend";
+          break;
+      }
+      document.getElementById("demo").innerHTML = text;
+    </script>
+  </body>
+</html>
