@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      //   const cars = ["Maruti", "Renault", "BMW"];
+      //   let text = "";
+      //   let i = 0; // initialization
+      //   // condition check
+      //   while (i < cars.length) {
+      //     text += cars[i] + "</br>";
+      //     console.log("I am true", i); // block of code
+      //     i++; // increment
+      //   }
+      const cars = ["BMW", "Volvo", "Saab", "Ford"];
+      let i = 0;
+      let text = "";
+
+      while (cars[i]) {
+        text += cars[i];
+        i++;
+      }
+      //   for (; cars[i]; ) {
+      //     text += cars[i];
+      //     i++;
+      //   }
+
+      document.getElementById("demo").innerHTML = text;
+    </script>
+  </body>
+</html>
