@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Square</title>
+  </head>
+  <body>
+    <h1>Square Starts</h1>
+    <input id="depth" type="number" />
+    <button onclick="handleOnClickHollowSquare()">Print Hollow Square</button>
+    <p id="demo"></p>
+    <script>
+      function handleOnClickHollowSquare() {
+        const n = Number(document.getElementById("depth").value);
+        let text = "";
+        for (let index = 0; index < n; index++) {
+          // external loop //row
+          console.log("Iteration external loop index value", index);
+          for (let j = 0; j < n; j++) {
+            //internal lopp //column
+            console.log("Iteration Internal loop j value", j);
+            if (index === 0 || index === n - 1) {
+              text += "*";
+            } else {
+              if (j === 0 || j === n - 1) {
+                text += "*";
+              } else {
+                text += "&nbsp;&nbsp;";
+              }
+            }
+          }
+          text += "</br>";
+        }
+        console.log(text);
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>
