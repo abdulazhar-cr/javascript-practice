@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="this.style.background='red'">Try Now</button>
+    <p id="demo"></p>
+    <script>
+      //   "use strict";
+      var x = this;
+      console.log("In Global Scope", this);
+      // In an object method, this refers to the object.
+      const person = {
+        fName: "Azhar",
+        lName: "Shaikh",
+        age: 35,
+        fullName: function () {
+          console.log("this keyword", this.fName, this.lName);
+          return this.fName + " " + this.lName;
+        },
+      };
+
+      console.log("The full name is ", person.fullName());
+      function handleButtonClick() {
+        // this.style
+        console.log("this keyword in the button click", this);
+      }
+      function myFunction() {
+        console.log(this);
+        return this;
+      }
+      const returedValue = myFunction();
+      console.log("returedValue", returedValue);
+    </script>
+  </body>
+</html>

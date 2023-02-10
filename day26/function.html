@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="myFunction(this)">Call via normal Function</button>
+    <button onclick="newFunction()">Call via arrow Function</button>
+
+    <p id="demo"></p>
+    <script>
+      //   "use strict";
+      // Normal JavaScript
+      function myFunction(event) {
+        console.log("This on click event", event);
+        document.getElementById("demo").innerHTML += event;
+        // block of code
+      }
+      //   myFunction();
+      // Function assigned/used as variable name
+      const personFullName = function (a, b) {
+        //block of code
+      };
+      //   personFullName(3, 5);
+      // Arrow Function---ES6
+      const newFunction = () => {
+        console.log("This on arrow click event", this);
+        document.getElementById("demo").innerHTML += this;
+
+        //block of code
+      };
+
+      const hello = () => {
+        return "Hello World";
+      };
+      const helloShortHand = () => "Hello World" + this;
+      const numbers = [1, 2, 3, 4];
+      numbers.forEach((value, index, arr) => {
+        //block
+        console.log("value", value, index, arr);
+      });
+
+      //map with normal fnction
+      const newArrayNoramalFunction = numbers.map(function (value) {
+        return value;
+      });
+      //map with arrow fnction
+      const newArrayNoramalArrow = numbers.map((value) => {
+        console.log("value::", value);
+        return value;
+      });
+      // map with arrow function shorthand (only applicable if we have only one line return code)
+      const newArrayShorthand = numbers.map((value) => value > 2);
+    </script>
+  </body>
+</html>
